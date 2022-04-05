@@ -53,7 +53,7 @@ public class TileNumber : TileBase, IBeginDragHandler, IDragHandler, IEndDragHan
                     var tile = result.gameObject.GetComponent<Tile>();
                     tile.SetTile(Number);
                     SetActive(false);
-                    _uiManager.TileReturnPool(this);
+                    //_uiManager.TileReturnPool(this);
                     return;
                 }
             }

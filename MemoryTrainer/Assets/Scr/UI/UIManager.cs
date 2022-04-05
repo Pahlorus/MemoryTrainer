@@ -137,18 +137,19 @@ public class UIManager : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             var tile = TileCreate(_tilesContainerTr);
-            var numberTile = TileBaseCreate(_sortTilesContainerTr);
+            var numberTile = TileNumberCreate(_sortTilesContainerTr);
             _tiles.Add(tile);
             _sortingTiles.Add(numberTile);
         }
     }
 
+    //pool is redundant for this implementation
     private Tile TileCreate(Transform parent)
     {
         return TileBaseCreate(parent, _tilePref, _tilePool);
     }
 
-    private TileNumber TileBaseCreate(Transform parent)
+    private TileNumber TileNumberCreate(Transform parent)
     {
         return TileBaseCreate(parent, _tileNumberPref, _tileSortingPool);
     }
